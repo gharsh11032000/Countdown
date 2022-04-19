@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Video background -->
+    <video class="video-background" loop muted autoplay>
+      <source src="./time-1.mp4" />
+    </video>
+    <div class="video-overlay"></div>
+    <!-- Countdown container -->
+    <div class="container" id="container">
+      <!-- Input form -->
+      <div class="input-container" id="input-container">
+        <a href="https://github.com/gharsh11032000"
+          ><h1>Create a Countdown</h1></a
+        >
+        <form class="form" id="countdownForm">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            class="title"
+            placeholder="What are you counting down to?"
+            required
+          />
+          <label for="date-picker">Select date</label>
+          <input type="date" class="date-picker" id="date-picker" required />
+          <button type="submit">Start</button>
+        </form>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown" hidden>
+        <h1 class="countdown-title"></h1>
+        <ul>
+          <li><span></span>days</li>
+          <li><span></span>hours</li>
+          <li><span></span>minutes</li>
+          <li><span></span>seconds</li>
+        </ul>
+        <button class="countdown-button">Reset</button>
+      </div>
+      <!-- Complete -->
+      <div class="complete" id="complete" hidden>
+        <h1 class="complete-title">Hurray! Countdown Completed 🎉</h1>
+        <h1 class="complete-info">finished on <span>05-12-2020</span></h1>
+        <button class="complete-button">New Countdown</button>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
